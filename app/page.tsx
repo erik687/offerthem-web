@@ -1,65 +1,132 @@
-import Image from "next/image";
+import { MainCTA } from "@/components/MainCTA";
+import { TrustSection } from "@/components/TrustSection";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10 text-center">
+
+          {/* Badge */}
+          <div className="inline-block mb-6 px-4 py-1.5 bg-blue-50 text-blue-700 font-semibold rounded-full text-sm">
+            Sveriges tryggaste mäklarjämförelse
+          </div>
+
+          {/* H1 Headline (Variant: Smärtpunkt / Risk) */}
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+            Riskera inte miljoner i slutpris – <br className="hidden md:block" />
+            <span className="text-blue-600">Anlita rätt mäklare från början.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          {/* Subheadline */}
+          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+            Statistik visar att valet av mäklare kan skilja 100 000-tals kronor i slutpris.
+            Jämför lokala experter gratis och säkra din vinst.
           </p>
+
+          {/* CTA Area */}
+          <div className="flex flex-col items-center gap-6">
+            <MainCTA />
+
+            {/* Trust Indicators near CTA */}
+            <div className="flex items-center gap-4 text-sm text-slate-500">
+              <span className="flex items-center gap-1">
+                <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                Gratis
+              </span>
+              <span className="flex items-center gap-1">
+                <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                Ej bindande
+              </span>
+              <span className="flex items-center gap-1">
+                <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                Verifierade mäklare
+              </span>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Video Placeholder (To be replaced with Lo-Fi Video) */}
+        <div className="mt-16 container mx-auto px-4">
+          <div className="max-w-3xl mx-auto bg-slate-900 rounded-2xl aspect-video relative flex items-center justify-center shadow-2xl">
+            <div className="text-center text-white p-6">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm border border-white/20">
+                <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+              </div>
+              <p className="font-semibold text-lg">Här placeras "Founder Video"</p>
+              <p className="text-sm text-slate-400 mt-2">Spela in din 30s video enligt manus och lägg in här.</p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Social Proof (Trust Section) */}
+      <TrustSection />
+
+      {/* Value Props Grid */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Därför väljer säljare OffertHem</h2>
+            <p className="text-slate-600">Vi har skalat bort bruset och fokuserar på det enda som betyder något: Ditt slutpris.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: "Topplistade Mäklare",
+                desc: "Vi samarbetar bara med mäklare som har dokumenterat höga slutpriser och kundnöjdhet i ditt område.",
+                icon: (
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                )
+              },
+              {
+                title: "Pressa Arvodet",
+                desc: "När mäklarna vet att de tävlar om din bostad ger de dig sitt absolut bästa erbjudande direkt.",
+                icon: (
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                )
+              },
+              {
+                title: "Spara Tid",
+                desc: "Slipp ringa runt. Fyll i formuläret på 1 minut och luta dig tillbaka medan offerterna trillar in.",
+                icon: (
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                )
+              }
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Redo att maximera din lägenhetsförsäljning?</h2>
+          <p className="text-blue-200 mb-10 max-w-2xl mx-auto text-lg">
+            Över 1 500 säljare har redan hittat sin drömmäklare via oss. Det kostar ingenting att jämföra.
+          </p>
+          <div className="flex justify-center">
+            <MainCTA />
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
+        <div className="container mx-auto px-4 text-center">
+          <p>© {new Date().getFullYear()} OffertHem. Alla rättigheter reserverade.</p>
+        </div>
+      </footer>
+    </main>
   );
 }
