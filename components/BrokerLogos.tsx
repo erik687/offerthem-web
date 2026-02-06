@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 export const BrokerLogos = () => {
     // Array of logos to display
     const logos = [
+        { name: "Fastighetsbyrån", src: "/brokers/fastighetsbyran.jpg" },
+        { name: "Länsförsäkringar Fastighetsförmedling", src: "/brokers/lansfast.png" },
         { name: "Mäklarringen", src: "/brokers/maklarringen.png" },
         { name: "Bjurfors", src: "/brokers/bjurfors.png" },
         { name: "Svensk Fastighetsförmedling", src: "/brokers/svenskfast.png" },
