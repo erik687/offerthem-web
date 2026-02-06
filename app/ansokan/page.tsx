@@ -165,7 +165,7 @@ function WizardContent() {
                     <div>
                         <label className="block text-sm font-bold text-slate-900 mb-3">Hur många mäklare vill du jämföra?</label>
                         <div className="grid grid-cols-3 gap-4">
-                            {[1, 2, 3].map((num) => (
+                            {[2, 3, 4].map((num) => (
                                 <button
                                     key={num}
                                     onClick={() => handleChange("brokerCount", num.toString())}
