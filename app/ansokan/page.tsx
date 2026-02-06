@@ -23,6 +23,7 @@ function WizardContent() {
     // Form State
     const [formData, setFormData] = useState({
         postcode: "",
+        city: "", // Add city to state
         area: "",
         rooms: "",
         description: "",
@@ -31,6 +32,8 @@ function WizardContent() {
         phone: "",
         address: ""
     });
+
+    const [isLoading, setIsLoading] = useState(false); // Loading state
 
     useEffect(() => {
         const type = searchParams.get("type");
@@ -41,7 +44,32 @@ function WizardContent() {
         }
     }, [searchParams]);
 
-    const handleNext = () => setStep(step + 1);
+    const handleNext = async () => {
+        if (step === 1) {
+            setIsLoading(true);
+            try {
+                // Remove spaces for API call
+                const cleanPostcode = formData.postcode.replace(/\s+/g, '');
+                if (cleanPostcode.length >= 5) {
+                    const response = await fetch(`https://api.zippopotam.us/se/${cleanPostcode}`);
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (data.places && data.places.length > 0) {
+                            setFormData(prev => ({ ...prev, city: data.places[0]["place name"] }));
+                        }
+                    }
+                }
+            } catch (error) {
+                console.error("Failed to fetch city", error);
+            } finally {
+                setIsLoading(false);
+                setStep(step + 1);
+            }
+        } else {
+            setStep(step + 1);
+        }
+    };
+
     const handleBack = () => setStep(step - 1);
 
     const handleChange = (field: string, value: string) => {
@@ -73,10 +101,10 @@ function WizardContent() {
                     <div className="mt-8 flex justify-end">
                         <button
                             onClick={handleNext}
-                            disabled={!formData.postcode}
-                            className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-2xl transition-all shadow-lg hover:shadow-blue-500/25"
+                            disabled={!formData.postcode || isLoading}
+                            className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-2xl transition-all shadow-lg hover:shadow-blue-500/25 flex justify-center items-center"
                         >
-                            Nästa steg
+                            {isLoading ? "Hämtar information..." : "Nästa steg"}
                         </button>
                     </div>
                 </div>
@@ -86,8 +114,12 @@ function WizardContent() {
 
     // Step 2: Details
     if (step === 2) {
+        const title = formData.city
+            ? `Information om din ${propertyType.toLowerCase()} i ${formData.city}`
+            : `Information om din ${propertyType.toLowerCase()}`;
+
         return (
-            <WizardLayout step={2} title={`Information om din ${propertyType.toLowerCase()}`} onBack={handleBack}>
+            <WizardLayout step={2} title={title} onBack={handleBack}>
                 <div className="max-w-xl mx-auto space-y-6">
                     <div className="grid grid-cols-2 gap-6">
                         <div>
