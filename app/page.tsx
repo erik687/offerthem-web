@@ -8,6 +8,8 @@ import { ReviewsSection } from "@/components/ReviewsSection";
 import { SocialProofPopup } from "@/components/SocialProofPopup";
 import { MainCTA } from "@/components/MainCTA";
 import { HeroLogos } from "@/components/HeroLogos";
+import { InfoSection } from "@/components/InfoSection";
+import { ChecklistSection } from "@/components/ChecklistSection";
 
 export default function Home() {
   return (
@@ -72,49 +74,11 @@ export default function Home() {
       {/* How it Works (Steps) */}
       <StepsSection />
 
-      {/* Value Props Grid */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Därför väljer säljare OffertHem</h2>
-            <p className="text-slate-600">Vi har skalat bort bruset och fokuserar på det enda som betyder något: Ditt slutpris.</p>
-          </div>
+      {/* Info Section (Circle Layout) */}
+      <InfoSection />
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                title: "Topplistade Mäklare",
-                desc: "Vi samarbetar bara med mäklare som har dokumenterat höga slutpriser och kundnöjdhet i ditt område.",
-                icon: (
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                )
-              },
-              {
-                title: "Pressa Arvodet",
-                desc: "När mäklarna vet att de tävlar om din bostad ger de dig sitt absolut bästa erbjudande direkt.",
-                icon: (
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                )
-              },
-              {
-                title: "Spara Tid",
-                desc: "Slipp ringa runt. Fyll i formuläret på 1 minut och luta dig tillbaka medan offerterna trillar in.",
-                icon: (
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                )
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
-                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Checklist Section */}
+      <ChecklistSection />
 
       {/* FAQ Section */}
       <FAQSection />
