@@ -20,12 +20,12 @@ export const HeroLogos = () => {
         <div className="w-full overflow-hidden mask-linear-fade">
             <div className="flex animate-marquee items-center gap-12 whitespace-nowrap">
                 {marqueeLogos.map((logo, index) => (
-                    <div key={index} className="relative flex-shrink-0 w-28 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
+                    <div key={index} className="relative flex-shrink-0 w-28 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 mix-blend-multiply">
                         <Image
                             src={logo.src}
                             alt={logo.name}
                             fill
-                            className="object-contain"
+                            className="object-contain mix-blend-multiply"
                         />
                     </div>
                 ))}
