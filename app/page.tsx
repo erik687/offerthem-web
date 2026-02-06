@@ -3,6 +3,7 @@ import { TrustSection } from "@/components/TrustSection";
 import { StepsSection } from "@/components/StepsSection";
 import { BrokerLogos } from "@/components/BrokerLogos";
 import { FAQSection } from "@/components/FAQSection";
+import { SocialProofPopup } from "@/components/SocialProofPopup";
 
 export default function Home() {
   return (
@@ -145,6 +146,9 @@ export default function Home() {
           <p>© {new Date().getFullYear()} OffertHem. Alla rättigheter reserverade.</p>
         </div>
       </footer>
+
+      {/* Dynamic Social Proof Notification */}
+      <SocialProofPopup />
     </main>
   );
 }
