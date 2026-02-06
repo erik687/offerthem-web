@@ -1,5 +1,5 @@
 import { Header } from "@/components/Header";
-import { LeadForm } from "@/components/LeadForm";
+import { PropertySelector } from "@/components/PropertySelector";
 import { Star } from "lucide-react";
 import Image from "next/image";
 import { StepsSection } from "@/components/StepsSection";
@@ -60,7 +60,7 @@ export default function Home() {
             <div className="relative">
               {/* Pattern Blob */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/40 blur-3xl -z-10 rounded-full mix-blend-multiply" />
-              <LeadForm />
+              <PropertySelector />
             </div>
           </div>
         </div>
