@@ -25,7 +25,7 @@ export const PropertySelector = () => {
     };
 
     return (
-        <div className="w-full bg-white rounded-3xl shadow-xl p-8 border border-blue-50">
+        <div className="w-full bg-white rounded-3xl shadow-xl p-6 md:p-10 border border-blue-50">
             <h2 className="text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 Vad vill du sälja?
             </h2>

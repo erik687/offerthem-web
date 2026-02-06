@@ -164,14 +164,14 @@ function WizardContent() {
 
                     <div>
                         <label className="block text-sm font-bold text-slate-900 mb-3">Hur många mäklare vill du jämföra?</label>
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
                             {[2, 3, 4].map((num) => (
                                 <button
                                     key={num}
                                     onClick={() => handleChange("brokerCount", num.toString())}
                                     className={`py-4 px-2 rounded-2xl font-bold text-center border-2 transition-all ${formData.brokerCount === num.toString()
-                                            ? "bg-blue-50 border-blue-600 text-blue-700 shadow-sm"
-                                            : "bg-white border-slate-200 text-slate-600 hover:border-blue-300 hover:bg-blue-50/50"
+                                        ? "bg-blue-50 border-blue-600 text-blue-700 shadow-sm"
+                                        : "bg-white border-slate-200 text-slate-600 hover:border-blue-300 hover:bg-blue-50/50"
                                         }`}
                                 >
                                     {num} {num === 1 ? "mäklare" : "mäklare"}
