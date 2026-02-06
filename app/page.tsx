@@ -111,7 +111,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Redo att maximera din lägenhetsförsäljning?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Redo att maximera din bostadsförsäljning?</h2>
           <p className="text-blue-200 mb-10 max-w-2xl mx-auto text-lg">
             Över 1 500 säljare har redan hittat sin drömmäklare via oss. Det kostar ingenting att jämföra.
           </p>
