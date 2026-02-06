@@ -170,8 +170,8 @@ function WizardContent() {
                                     key={num}
                                     onClick={() => handleChange("brokerCount", num.toString())}
                                     className={`py-4 px-2 rounded-2xl font-bold text-center border-2 transition-all ${formData.brokerCount === num.toString()
-                                        ? "bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/30"
-                                        : "bg-white border-slate-100 text-slate-600 hover:border-blue-200 hover:bg-slate-50"
+                                            ? "bg-blue-50 border-blue-600 text-blue-700 shadow-sm"
+                                            : "bg-white border-slate-200 text-slate-600 hover:border-blue-300 hover:bg-blue-50/50"
                                         }`}
                                 >
                                     {num} {num === 1 ? "mäklare" : "mäklare"}
