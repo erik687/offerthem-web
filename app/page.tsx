@@ -4,10 +4,14 @@ import { StepsSection } from "@/components/StepsSection";
 import { BrokerLogos } from "@/components/BrokerLogos";
 import { FAQSection } from "@/components/FAQSection";
 import { SocialProofPopup } from "@/components/SocialProofPopup";
+import { Header } from "@/components/Header";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
+      {/* Header */}
+      <Header />
+
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         <div className="container mx-auto px-4 relative z-10 text-center">
