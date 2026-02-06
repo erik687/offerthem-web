@@ -1,5 +1,8 @@
 import { MainCTA } from "@/components/MainCTA";
 import { TrustSection } from "@/components/TrustSection";
+import { StepsSection } from "@/components/StepsSection";
+import { BrokerLogos } from "@/components/BrokerLogos";
+import { FAQSection } from "@/components/FAQSection";
 
 export default function Home() {
   return (
@@ -49,20 +52,27 @@ export default function Home() {
 
         {/* Video Placeholder (To be replaced with Lo-Fi Video) */}
         <div className="mt-16 container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-slate-900 rounded-2xl aspect-video relative flex items-center justify-center shadow-2xl">
-            <div className="text-center text-white p-6">
-              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm border border-white/20">
-                <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+          <div className="max-w-3xl mx-auto bg-slate-900 rounded-2xl aspect-video relative flex items-center justify-center shadow-2xl overflow-hidden group cursor-pointer">
+            {/* Fake Video Thumb / Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col items-center justify-center">
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 ml-1 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
               </div>
-              <p className="font-semibold text-lg">Här placeras "Founder Video"</p>
-              <p className="text-sm text-slate-400 mt-2">Spela in din 30s video enligt manus och lägg in här.</p>
+              <p className="mt-6 text-white font-medium text-lg drop-shadow-md">Se hur du maxar din försäljning på 30s</p>
             </div>
+            <div className="absolute bottom-4 right-4 bg-black/50 px-2 py-1 rounded text-white text-xs backdrop-blur-md">0:30</div>
           </div>
         </div>
       </section>
 
+      {/* Broker Logos (Trusted Partners) */}
+      <BrokerLogos />
+
       {/* Social Proof (Trust Section) */}
       <TrustSection />
+
+      {/* How it Works (Steps) */}
+      <StepsSection />
 
       {/* Value Props Grid */}
       <section className="py-20 bg-slate-50">
@@ -108,6 +118,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FAQSection />
+
       {/* CTA Section */}
       <section className="py-20 bg-blue-50 text-slate-900">
         <div className="container mx-auto px-4 text-center">
@@ -124,6 +137,11 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
         <div className="container mx-auto px-4 text-center">
+          <div className="flex justify-center gap-6 mb-8 text-sm font-medium">
+            <a href="#" className="hover:text-white transition-colors">Om oss</a>
+            <a href="#" className="hover:text-white transition-colors">Integritetspolicy</a>
+            <a href="#" className="hover:text-white transition-colors">Kontakta oss</a>
+          </div>
           <p>© {new Date().getFullYear()} OffertHem. Alla rättigheter reserverade.</p>
         </div>
       </footer>
