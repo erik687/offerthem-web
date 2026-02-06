@@ -33,17 +33,17 @@ export const PropertySelector = () => {
                     <button
                         key={type.id}
                         onClick={() => handleSelect(type.id)}
-                        className="w-full flex items-center justify-between p-5 bg-slate-50 hover:bg-slate-100 border border-slate-100 rounded-xl transition-all duration-200 group text-left"
+                        className="w-full flex items-center justify-between p-4 pl-6 bg-slate-50 hover:bg-white border border-slate-100 hover:border-blue-100 rounded-2xl transition-all duration-200 group shadow-sm hover:shadow-md"
                     >
-                        <span className="font-semibold text-slate-900 text-lg">{type.label}</span>
-                        <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white shadow-sm group-hover:bg-orange-600 transition-colors">
+                        <span className="font-bold text-slate-900 text-lg">{type.label}</span>
+                        <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-sm group-hover:bg-blue-700 transition-colors transform group-hover:scale-105">
                             <ChevronRight className="w-6 h-6" />
                         </div>
                     </button>
                 ))}
             </div>
 
-            <div className="mt-8 text-center">
+            <div className="mt-8 text-center pt-6 border-t border-slate-50">
                 <p className="text-sm text-slate-400 font-medium">
                     4.9/5 i betyg baserat på 300+ omdömen
                 </p>

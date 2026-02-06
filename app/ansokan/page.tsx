@@ -66,15 +66,15 @@ function WizardContent() {
                         value={formData.postcode}
                         onChange={(e) => handleChange("postcode", e.target.value)}
                         placeholder="T.ex. 123 45"
-                        className="w-full p-4 text-lg border-2 border-slate-200 rounded-xl focus:border-orange-500 focus:ring-0 outline-none transition-colors"
+                        className="w-full p-5 text-lg border-2 border-slate-200 rounded-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
                     />
-                    <p className="text-xs text-slate-500 mt-2">Postnumret används endast för att matcha dig med rätt lokala mäklare.</p>
+                    <p className="text-xs text-slate-500 mt-3 font-medium">Postnumret används endast för att matcha dig med rätt lokala mäklare.</p>
 
                     <div className="mt-8 flex justify-end">
                         <button
                             onClick={handleNext}
                             disabled={!formData.postcode}
-                            className="bg-orange-400 hover:bg-orange-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-8 rounded-xl transition-all"
+                            className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-2xl transition-all shadow-lg hover:shadow-blue-500/25"
                         >
                             Nästa steg
                         </button>
@@ -91,22 +91,22 @@ function WizardContent() {
                 <div className="max-w-xl mx-auto space-y-6">
                     <div className="grid grid-cols-2 gap-6">
                         <div>
-                            <label className="block text-sm font-bold text-slate-800 mb-2">Boarea (m²) <span className="text-slate-400 font-normal">(frivillig)</span></label>
+                            <label className="block text-sm font-bold text-slate-900 mb-2">Boarea (m²) <span className="text-slate-400 font-normal">(frivillig)</span></label>
                             <input
                                 type="number"
                                 value={formData.area}
                                 onChange={(e) => handleChange("area", e.target.value)}
                                 placeholder="85"
-                                className="w-full p-4 border border-slate-200 rounded-xl focus:border-orange-500 outline-none"
+                                className="w-full p-4 border-2 border-slate-100 rounded-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-bold text-slate-800 mb-2">Antal rum <span className="text-slate-400 font-normal">(frivillig)</span></label>
+                            <label className="block text-sm font-bold text-slate-900 mb-2">Antal rum <span className="text-slate-400 font-normal">(frivillig)</span></label>
                             <div className="relative">
                                 <select
                                     value={formData.rooms}
                                     onChange={(e) => handleChange("rooms", e.target.value)}
-                                    className="w-full p-4 border border-slate-200 rounded-xl focus:border-orange-500 outline-none appearance-none bg-white"
+                                    className="w-full p-4 border-2 border-slate-100 rounded-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none appearance-none bg-white transition-all"
                                 >
                                     <option value="">Välj</option>
                                     {[1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 6, 7, 8].map(r => (
@@ -119,20 +119,20 @@ function WizardContent() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-bold text-slate-800 mb-2">Övrig information <span className="text-slate-400 font-normal">(frivillig)</span></label>
+                        <label className="block text-sm font-bold text-slate-900 mb-2">Övrig information <span className="text-slate-400 font-normal">(frivillig)</span></label>
                         <textarea
                             value={formData.description}
                             onChange={(e) => handleChange("description", e.target.value)}
                             placeholder="T.ex. balkong, nytt kök, närhet till kommunikationer..."
                             rows={4}
-                            className="w-full p-4 border border-slate-200 rounded-xl focus:border-orange-500 outline-none resize-none"
+                            className="w-full p-4 border-2 border-slate-100 rounded-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none resize-none transition-all"
                         />
                     </div>
 
                     <div className="mt-8 flex justify-end">
                         <button
                             onClick={handleNext}
-                            className="bg-orange-400 hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-xl transition-all"
+                            className="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-2xl transition-all shadow-lg hover:shadow-blue-500/25"
                         >
                             Nästa steg
                         </button>
@@ -150,48 +150,48 @@ function WizardContent() {
                     {/* Name & Email Row */}
                     <div className="grid md:grid-cols-2 gap-4">
                         <div>
-                            <label className="block text-sm font-bold text-slate-800 mb-2">Namn</label>
+                            <label className="block text-sm font-bold text-slate-900 mb-2">Namn</label>
                             <input
                                 type="text"
                                 value={formData.name}
                                 onChange={(e) => handleChange("name", e.target.value)}
                                 placeholder="För- och efternamn"
-                                className="w-full p-3 border border-slate-200 rounded-xl focus:border-orange-500 outline-none"
+                                className="w-full p-4 border-2 border-slate-100 rounded-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
                             />
                         </div>
                         <div>
-                            <label className="block text-sm font-bold text-slate-800 mb-2">E-postadress</label>
+                            <label className="block text-sm font-bold text-slate-900 mb-2">E-postadress</label>
                             <input
                                 type="email"
                                 value={formData.email}
                                 onChange={(e) => handleChange("email", e.target.value)}
                                 placeholder="namn@exempel.se"
-                                className="w-full p-3 border border-slate-200 rounded-xl focus:border-orange-500 outline-none"
+                                className="w-full p-4 border-2 border-slate-100 rounded-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
                             />
                         </div>
                     </div>
 
                     {/* Phone */}
                     <div>
-                        <label className="block text-sm font-bold text-slate-800 mb-2">Telefonnummer</label>
+                        <label className="block text-sm font-bold text-slate-900 mb-2">Telefonnummer</label>
                         <input
                             type="tel"
                             value={formData.phone}
                             onChange={(e) => handleChange("phone", e.target.value)}
                             placeholder="070-123 45 67"
-                            className="w-full p-3 border border-slate-200 rounded-xl focus:border-orange-500 outline-none"
+                            className="w-full p-4 border-2 border-slate-100 rounded-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
                         />
                     </div>
 
                     {/* Address */}
                     <div>
-                        <label className="block text-sm font-bold text-slate-800 mb-2">Bostadens adress</label>
+                        <label className="block text-sm font-bold text-slate-900 mb-2">Bostadens adress</label>
                         <input
                             type="text"
                             value={formData.address}
                             onChange={(e) => handleChange("address", e.target.value)}
                             placeholder="T.ex. Storgatan 1"
-                            className="w-full p-3 border border-slate-200 rounded-xl focus:border-orange-500 outline-none"
+                            className="w-full p-4 border-2 border-slate-100 rounded-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
                         />
                         <p className="text-xs text-slate-500 mt-2">Adressen används för att matcha dig med rätt lokala mäklare.</p>
                     </div>
@@ -204,7 +204,7 @@ function WizardContent() {
                         <button
                             onClick={handleSubmit}
                             disabled={!formData.name || !formData.phone}
-                            className="bg-orange-400 hover:bg-orange-500 disabled:opacity-50 text-white font-bold py-3 px-8 rounded-xl transition-all w-full md:w-auto"
+                            className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-bold py-4 px-10 rounded-2xl transition-all shadow-lg hover:shadow-blue-500/25"
                         >
                             Visa mina mäklare
                         </button>
@@ -239,51 +239,64 @@ function WizardContent() {
 // Layout Component for Wizard Steps
 function WizardLayout({ step, title, subtitle, children, onBack }: { step: number, title: string, subtitle?: string, children: React.ReactNode, onBack?: () => void }) {
     return (
-        <div className="min-h-screen bg-[#FDFBF7]"> {/* Creamy background from image */}
+        <div className="min-h-screen bg-sky-50">
             <header className="p-6">
-                <div className="container mx-auto font-bold text-xl text-slate-800">
-                    OffertHem
+                <div className="container mx-auto flex justify-center">
+                    <div className="relative w-32 h-8 md:w-40 md:h-10">
+                        <img src="/logo.png" alt="OffertHem" className="object-contain w-full h-full" />
+                    </div>
                 </div>
             </header>
 
-            <main className="container mx-auto px-4 py-8 max-w-3xl">
+            <main className="container mx-auto px-4 py-8 max-w-2xl">
                 {/* Progress Steps */}
-                <div className="flex justify-center items-center gap-4 mb-16 text-sm font-medium text-slate-500">
-                    <div className={`flex flex-col items-center gap-2 ${step >= 1 ? 'text-orange-500' : ''}`}>
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 ${step >= 1 ? 'bg-orange-500 border-orange-500 text-white' : 'border-slate-200'}`}>1</div>
-                        <span>Postnr</span>
+                <div className="flex justify-center items-center gap-2 mb-12">
+                    {/* Step 1 */}
+                    <div className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-colors ${step >= 1 ? 'bg-blue-600 text-white shadow-md' : 'bg-white text-slate-400 border border-slate-200'}`}>
+                        <span>1</span>
+                        <span className="hidden md:inline">Postnr</span>
                     </div>
-                    <div className="w-12 h-0.5 bg-slate-200 mb-6" />
-                    <div className={`flex flex-col items-center gap-2 ${step >= 2 ? 'text-orange-500' : ''}`}>
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 ${step >= 2 ? 'bg-orange-500 border-orange-500 text-white' : 'border-slate-200'}`}>2</div>
-                        <span>Detaljer</span>
+
+                    <div className={`w-8 h-1 rounded-full ${step >= 2 ? 'bg-blue-600' : 'bg-slate-200'}`} />
+
+                    {/* Step 2 */}
+                    <div className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-colors ${step >= 2 ? 'bg-blue-600 text-white shadow-md' : 'bg-white text-slate-400 border border-slate-200'}`}>
+                        <span>2</span>
+                        <span className="hidden md:inline">Detaljer</span>
                     </div>
-                    <div className="w-12 h-0.5 bg-slate-200 mb-6" />
-                    <div className={`flex flex-col items-center gap-2 ${step >= 3 ? 'text-orange-500' : ''}`}>
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 ${step >= 3 ? 'bg-orange-500 border-orange-500 text-white' : 'border-slate-200'}`}>3</div>
-                        <span>Kontakt</span>
+
+                    <div className={`w-8 h-1 rounded-full ${step >= 3 ? 'bg-blue-600' : 'bg-slate-200'}`} />
+
+                    {/* Step 3 */}
+                    <div className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-colors ${step >= 3 ? 'bg-blue-600 text-white shadow-md' : 'bg-white text-slate-400 border border-slate-200'}`}>
+                        <span>3</span>
+                        <span className="hidden md:inline">Kontakt</span>
                     </div>
                 </div>
 
                 {/* Content Card */}
-                <div className="text-center mb-12">
-                    <h1 className="text-3xl font-bold text-slate-900 mb-3">{title}</h1>
+                <div className="text-center mb-8">
+                    <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">{title}</h1>
                     {subtitle ? (
-                        <p className="text-slate-600 max-w-xl mx-auto">{subtitle}</p>
+                        <p className="text-slate-600 max-w-lg mx-auto text-lg leading-relaxed">{subtitle}</p>
                     ) : (
-                        <p className="text-slate-500">Jämför de 3 bästa lokala mäklarna i ditt område</p>
+                        <p className="text-slate-500 text-lg">Jämför de 3 bästa lokala mäklarna i ditt område</p>
                     )}
                 </div>
 
-                <div className="bg-white rounded-3xl shadow-sm border border-slate-100 p-6 md:p-12 relative">
+                <div className="bg-white rounded-3xl shadow-xl border border-blue-50/50 p-6 md:p-12 relative overflow-hidden">
+                    {/* Decorative blob */}
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 -z-10 opacity-50" />
+
                     {children}
 
                     {onBack && (
                         <button
                             onClick={onBack}
-                            className="absolute bottom-12 left-12 flex items-center gap-2 text-slate-800 font-bold hover:text-slate-600 transition-colors"
+                            className="absolute top-8 left-8 p-2 rounded-full hover:bg-slate-50 text-slate-400 hover:text-slate-700 transition-all"
+                            aria-label="Gå tillbaka"
                         >
-                            <ArrowLeft className="w-5 h-5" /> Tillbaka
+                            <ArrowLeft className="w-5 h-5" />
                         </button>
                     )}
                 </div>
