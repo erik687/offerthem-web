@@ -68,8 +68,8 @@ export const ChecklistSection = () => {
                     <div className="relative h-full min-h-[500px] rounded-3xl overflow-hidden shadow-2xl">
                         {/* Placeholder for the user's image, utilizing a generic professional image for now */}
                         <img
-                            src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80"
-                            alt="Professionell mäklare"
+                            src="/broker-meeting.png"
+                            alt="Professionell mäklare i möte med kunder"
                             className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60" />
