@@ -1,12 +1,12 @@
-import { MainCTA } from "@/components/MainCTA";
-import { TrustSection } from "@/components/TrustSection";
-import { StepsSection } from "@/components/StepsSection";
-import { BrokerLogos } from "@/components/BrokerLogos";
-import { FAQSection } from "@/components/FAQSection";
-import { SocialProofPopup } from "@/components/SocialProofPopup";
 import { Header } from "@/components/Header";
 import { LeadForm } from "@/components/LeadForm";
 import { Star } from "lucide-react";
+import Image from "next/image";
+import { StepsSection } from "@/components/StepsSection";
+import { FAQSection } from "@/components/FAQSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
+import { SocialProofPopup } from "@/components/SocialProofPopup";
+import { MainCTA } from "@/components/MainCTA";
 
 export default function Home() {
   return (
@@ -47,22 +47,23 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Google Rating Badge */}
-              <div className="flex items-center gap-4 bg-white p-3 rounded-xl shadow-sm border border-slate-100 w-fit">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                  alt="Google"
-                  className="w-8 h-8"
-                />
-                <div className="flex flex-col">
-                  <span className="text-xs font-bold text-slate-900 uppercase tracking-wide">Google omdöme</span>
-                  <div className="flex items-center gap-1">
-                    <span className="font-bold text-slate-900">5.0</span>
-                    <div className="flex gap-0.5">
-                      {[1, 2, 3, 4, 5].map((i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                      ))}
-                    </div>
+
+              {/* Broker Logos Grid in Hero (Replaces Google Badge) */}
+              <div className="pt-4">
+                <p className="text-sm font-medium text-slate-500 mb-4 uppercase tracking-wider">Vi samarbetar med ledande mäklare:</p>
+                <div className="flex flex-wrap gap-x-6 gap-y-4 items-center opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
+                  {/* Using inline images for critical Hero performance instead of complex marquee */}
+                  <div className="relative w-24 h-8">
+                    <Image src="/brokers/fastighetsbyran.jpg" alt="Fastighetsbyrån" fill className="object-contain" />
+                  </div>
+                  <div className="relative w-28 h-8">
+                    <Image src="/brokers/svenskfast.png" alt="Svensk Fastighetsförmedling" fill className="object-contain" />
+                  </div>
+                  <div className="relative w-20 h-8">
+                    <Image src="/brokers/bjurfors.png" alt="Bjurfors" fill className="object-contain" />
+                  </div>
+                  <div className="relative w-24 h-8">
+                    <Image src="/brokers/lansfast.png" alt="Länsförsäkringar" fill className="object-contain" />
                   </div>
                 </div>
               </div>
@@ -74,16 +75,12 @@ export default function Home() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/40 blur-3xl -z-10 rounded-full mix-blend-multiply" />
               <LeadForm />
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Broker Logos (Trusted Partners) */}
-      <BrokerLogos />
-
-      {/* Social Proof (Trust Section) */}
-      <TrustSection />
+      {/* Trust / Social Proof Section */}
+      <ReviewsSection />
 
       {/* How it Works (Steps) */}
       <StepsSection />
