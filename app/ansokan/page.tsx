@@ -30,7 +30,8 @@ function WizardContent() {
         name: "",
         email: "",
         phone: "",
-        address: ""
+        address: "",
+        brokerCount: "3" // Default to 3 brokers
     });
 
     const [isLoading, setIsLoading] = useState(false); // Loading state
@@ -159,6 +160,24 @@ function WizardContent() {
                             rows={4}
                             className="w-full p-4 border-2 border-slate-100 rounded-2xl focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none resize-none transition-all"
                         />
+                    </div>
+
+                    <div>
+                        <label className="block text-sm font-bold text-slate-900 mb-3">Hur många mäklare vill du jämföra?</label>
+                        <div className="grid grid-cols-3 gap-4">
+                            {[1, 2, 3].map((num) => (
+                                <button
+                                    key={num}
+                                    onClick={() => handleChange("brokerCount", num.toString())}
+                                    className={`py-4 px-2 rounded-2xl font-bold text-center border-2 transition-all ${formData.brokerCount === num.toString()
+                                        ? "bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/30"
+                                        : "bg-white border-slate-100 text-slate-600 hover:border-blue-200 hover:bg-slate-50"
+                                        }`}
+                                >
+                                    {num} {num === 1 ? "mäklare" : "mäklare"}
+                                </button>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="mt-8 flex justify-end">
