@@ -5,6 +5,7 @@ import { BrokerLogos } from "@/components/BrokerLogos";
 import { FAQSection } from "@/components/FAQSection";
 import { SocialProofPopup } from "@/components/SocialProofPopup";
 import { Header } from "@/components/Header";
+import { LeadForm } from "@/components/LeadForm";
 
 export default function Home() {
   return (
@@ -13,59 +14,66 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10 text-center">
+      <section className="relative pt-28 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-sky-50">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
 
-          {/* Badge */}
-          <div className="inline-block mb-6 px-4 py-1.5 bg-blue-50 text-blue-700 font-semibold rounded-full text-sm">
-            Sveriges tryggaste mäklarjämförelse
-          </div>
+            {/* Left Column: Copy & Trust */}
+            <div className="text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight mb-6 leading-[1.1]">
+                Jämför erbjudanden från <span className="text-blue-600">kvalitetssäkrade mäklare</span>
+              </h1>
 
-          {/* H1 Headline (Variant: Smärtpunkt / Risk) */}
-          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
-            Riskera inte miljoner i slutpris – <br className="hidden md:block" />
-            <span className="text-blue-600">Anlita rätt mäklare från början.</span>
-          </h1>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                Ska du sälja lägenhet eller hus? Låt inte slumpen avgöra valet av mäklare.
+                Vi matchar dig med lokala experter som kan din ort och ditt område utan och innan.
+              </p>
 
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-            Statistik visar att valet av mäklare kan skilja 100 000-tals kronor i slutpris.
-            Jämför lokala experter gratis och säkra din vinst.
-          </p>
-
-          {/* CTA Area */}
-          <div className="flex flex-col items-center gap-6">
-            <MainCTA />
-
-            {/* Trust Indicators near CTA */}
-            <div className="flex items-center gap-4 text-sm text-slate-500">
-              <span className="flex items-center gap-1">
-                <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                Gratis
-              </span>
-              <span className="flex items-center gap-1">
-                <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                Ej bindande
-              </span>
-              <span className="flex items-center gap-1">
-                <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                Verifierade mäklare
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Video Placeholder (To be replaced with Lo-Fi Video) */}
-        <div className="mt-16 container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-slate-900 rounded-2xl aspect-video relative flex items-center justify-center shadow-2xl overflow-hidden group cursor-pointer">
-            {/* Fake Video Thumb / Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col items-center justify-center">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-8 h-8 ml-1 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+              {/* Bullet Points */}
+              <div className="space-y-4 mb-8 bg-white/50 p-6 rounded-2xl border border-blue-100">
+                {[
+                  "Hitta bästa mäklaren för dig",
+                  "Få högre försäljningspris",
+                  "Spara tid och pengar",
+                  "Kvalitetssäkrade mäklare"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3.5 h-3.5 text-green-600" fill="none" strokeWidth={3} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    </div>
+                    <span className="font-semibold text-slate-800">{item}</span>
+                  </div>
+                ))}
               </div>
-              <p className="mt-6 text-white font-medium text-lg drop-shadow-md">Se hur du maxar din försäljning på 30s</p>
+
+              {/* Google Rating Badge */}
+              <div className="flex items-center gap-4 bg-white p-3 rounded-xl shadow-sm border border-slate-100 w-fit">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                  alt="Google"
+                  className="w-8 h-8"
+                />
+                <div className="flex flex-col">
+                  <span className="text-xs font-bold text-slate-900 uppercase tracking-wide">Google omdöme</span>
+                  <div className="flex items-center gap-1">
+                    <span className="font-bold text-slate-900">5.0</span>
+                    <div className="flex gap-0.5">
+                      {[1, 2, 3, 4, 5].map((i) => (
+                        <svg key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="absolute bottom-4 right-4 bg-black/50 px-2 py-1 rounded text-white text-xs backdrop-blur-md">0:30</div>
+
+            {/* Right Column: Lead Form */}
+            <div className="relative">
+              {/* Pattern Blob */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/40 blur-3xl -z-10 rounded-full mix-blend-multiply" />
+              <LeadForm />
+            </div>
+
           </div>
         </div>
       </section>
