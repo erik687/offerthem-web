@@ -37,8 +37,8 @@ export const ChecklistSection = () => {
                             Genom att analysera mäklarnas resultat, lokalkännedom och kundnöjdhet kan du öka oddsen för att din försäljning blir riktigt lyckad.
                         </p>
 
-                        <div className="bg-white border-2 border-slate-100 rounded-3xl overflow-hidden shadow-sm">
-                            <div className="bg-orange-500 py-3 px-6">
+                        <div className="bg-white border-2 border-slate-100 rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50">
+                            <div className="bg-blue-600 py-3 px-6">
                                 <span className="text-white font-bold tracking-wide uppercase text-sm">Checklistan att ha koll på</span>
                             </div>
 
@@ -49,8 +49,8 @@ export const ChecklistSection = () => {
                                     {checklistItems.map((item, i) => (
                                         <div key={i} className="flex gap-4">
                                             <div className="mt-1 flex-shrink-0">
-                                                <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
-                                                    <Check className="w-4 h-4 text-orange-600" strokeWidth={3} />
+                                                <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                                    <Check className="w-4 h-4 text-green-600" strokeWidth={3} />
                                                 </div>
                                             </div>
                                             <div>
@@ -68,7 +68,7 @@ export const ChecklistSection = () => {
                     <div className="relative h-full min-h-[500px] rounded-3xl overflow-hidden shadow-2xl">
                         {/* Placeholder for the user's image, utilizing a generic professional image for now */}
                         <img
-                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80"
+                            src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80"
                             alt="Professionell mäklare"
                             className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                         />
