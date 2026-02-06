@@ -7,6 +7,7 @@ import { FAQSection } from "@/components/FAQSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { SocialProofPopup } from "@/components/SocialProofPopup";
 import { MainCTA } from "@/components/MainCTA";
+import { HeroLogos } from "@/components/HeroLogos";
 
 export default function Home() {
   return (
@@ -17,10 +18,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-28 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-sky-50">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
 
             {/* Left Column: Copy & Trust */}
-            <div className="text-left">
+            <div className="text-left pt-2">
               <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-6 leading-[1.1]">
                 Jämför erbjudanden från <span className="text-blue-600">kvalitetssäkrade mäklare</span>
               </h1>
@@ -48,24 +49,10 @@ export default function Home() {
               </div>
 
 
-              {/* Broker Logos Grid in Hero (Replaces Google Badge) */}
+              {/* Broker Logos Marquee in Hero */}
               <div className="pt-4">
                 <p className="text-sm font-medium text-slate-500 mb-4 uppercase tracking-wider">Vi samarbetar med ledande mäklare:</p>
-                <div className="flex flex-wrap gap-x-6 gap-y-4 items-center opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
-                  {/* Using inline images for critical Hero performance instead of complex marquee */}
-                  <div className="relative w-24 h-8">
-                    <Image src="/brokers/fastighetsbyran.jpg" alt="Fastighetsbyrån" fill className="object-contain" />
-                  </div>
-                  <div className="relative w-28 h-8">
-                    <Image src="/brokers/svenskfast.png" alt="Svensk Fastighetsförmedling" fill className="object-contain" />
-                  </div>
-                  <div className="relative w-20 h-8">
-                    <Image src="/brokers/bjurfors.png" alt="Bjurfors" fill className="object-contain" />
-                  </div>
-                  <div className="relative w-24 h-8">
-                    <Image src="/brokers/lansfast.png" alt="Länsförsäkringar" fill className="object-contain" />
-                  </div>
-                </div>
+                <HeroLogos />
               </div>
             </div>
 
