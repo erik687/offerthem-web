@@ -25,10 +25,10 @@ export const BrokerLogos = () => {
                 </p>
             </div>
 
-            <div className="relative w-full overflow-hidden">
-                <div className="flex animate-marquee items-center gap-12 whitespace-nowrap">
+            <div className="relative w-full overflow-hidden mask-linear-fade">
+                <div className="flex animate-marquee items-center gap-32 whitespace-nowrap">
                     {marqueeLogos.map((logo, index) => (
-                        <div key={index} className="relative flex-shrink-0 w-40 h-16 opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
+                        <div key={index} className="relative flex-shrink-0 w-48 h-20 opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
                             <Image
                                 src={logo.src}
                                 alt={logo.name}
@@ -47,7 +47,14 @@ export const BrokerLogos = () => {
                     100% { transform: translateX(-50%); }
                 }
                 .animate-marquee {
-                    animation: marquee 30s linear infinite;
+                    animation: marquee 60s linear infinite;
+                    /* Ensure hardware acceleration for smoother animation */
+                    will-change: transform;
+                }
+                /* Optional: Add fade mask to sides for a premium look */
+                .mask-linear-fade {
+                    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+                    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
                 }
             `}</style>
         </section>
