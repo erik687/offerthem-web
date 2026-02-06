@@ -331,7 +331,7 @@ function WizardLayout({ step, title, subtitle, children, onBack }: { step: numbe
                     {subtitle ? (
                         <p className="text-slate-600 max-w-lg mx-auto text-lg leading-relaxed">{subtitle}</p>
                     ) : (
-                        <p className="text-slate-500 text-lg">Jämför de 3 bästa lokala mäklarna i ditt område</p>
+                        <p className="text-slate-500 text-lg">Jämför de bästa lokala mäklarna i ditt område</p>
                     )}
                 </div>
 

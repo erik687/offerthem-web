@@ -30,7 +30,7 @@ export const PropertySelector = () => {
                 Vad vill du sälja?
             </h2>
             <p className="text-slate-600 mb-8 text-lg leading-relaxed">
-                Få erbjudanden från 3 lokala mäklare i ditt område och en tydlig strategi för värdering eller eventuell försäljningen av din bostad.
+                Få erbjudanden från flera lokala mäklare i ditt område och en tydlig strategi för värdering eller eventuell försäljningen av din bostad.
             </p>
 
             <div className="space-y-3">
