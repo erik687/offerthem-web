@@ -49,7 +49,7 @@ export const SocialProofPopup = () => {
                     animate={{ opacity: 1, y: 0, x: 0 }}
                     exit={{ opacity: 0, y: 20, x: -20 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="fixed bottom-6 left-6 z-50 bg-white rounded-xl shadow-xl shadow-slate-200/50 border border-slate-100 p-4 max-w-xs flex items-center gap-4"
+                    className="fixed bottom-6 left-6 z-[100] bg-white rounded-xl shadow-xl shadow-slate-200/50 border border-slate-100 p-4 max-w-xs flex items-center gap-4"
                 >
                     <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
                         <CheckCircle className="w-6 h-6 text-green-600" />
