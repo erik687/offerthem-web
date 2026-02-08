@@ -33,7 +33,11 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://upload.wikimedia.org; font-src 'self' data:; frame-src 'self' https://www.offerthem.cloud; connect-src 'self' https://vitals.vercel-analytics.com;"
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https:; font-src 'self' data:; frame-src 'self'; connect-src 'self' https://api.zippopotam.us https://vitals.vercel-analytics.com; upgrade-insecure-requests;"
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()'
           }
         ]
       }
