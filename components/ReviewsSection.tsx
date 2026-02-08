@@ -55,7 +55,7 @@ export const ReviewsSection = () => {
                 {/* Reviews Grid */}
                 <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {reviews.map((review, index) => (
-                        <div key={index} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm relative hover:shadow-xl transition-all duration-300 group">
+                        <div key={index} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm relative hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
 
 
                             <div className="flex gap-1 mb-6">
