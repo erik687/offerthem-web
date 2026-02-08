@@ -10,6 +10,7 @@ import { MainCTA } from "@/components/MainCTA";
 import { HeroLogos } from "@/components/HeroLogos";
 import { InfoSection } from "@/components/InfoSection";
 import { ChecklistSection } from "@/components/ChecklistSection";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-28 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-sky-50">
+      <section id="start" className="relative pt-28 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-sky-50">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
 
@@ -97,16 +98,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center gap-6 mb-8 text-sm font-medium">
-            <a href="#" className="hover:text-white transition-colors">Om oss</a>
-            <a href="#" className="hover:text-white transition-colors">Integritetspolicy</a>
-            <a href="#" className="hover:text-white transition-colors">Kontakta oss</a>
-          </div>
-          <p>© {new Date().getFullYear()} OffertHem. Alla rättigheter reserverade.</p>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Dynamic Social Proof Notification */}
       <SocialProofPopup />

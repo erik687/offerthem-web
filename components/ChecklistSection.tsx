@@ -67,8 +67,8 @@ export const ChecklistSection = () => {
                         {/* CTA Button */}
                         <div className="mt-8">
                             <a
-                                href="/ansokan?type=bostad"
-                                className="inline-flex items-center justify-center w-full md:w-auto gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 group"
+                                href="#start"
+                                className="inline-flex items-center justify-center w-full md:w-auto gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-200 transform hover:-translate-y-1 group"
                             >
                                 Jämför mäklare kostnadsfritt
                                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,7 +76,7 @@ export const ChecklistSection = () => {
                                 </svg>
                             </a>
                             <p className="text-slate-500 text-sm mt-3 text-center md:text-left pl-1">
-                                Fyll i formuläret på 2 minuter – helt utan förbindelser.
+                                Tar mindre än 1 minut – och är helt utan förbindelser.
                             </p>
                         </div>
                     </div>
