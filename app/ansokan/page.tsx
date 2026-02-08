@@ -341,7 +341,7 @@ function WizardLayout({ step, title, subtitle, children, onBack }: { step: numbe
                     )}
                 </div>
 
-                <div className="bg-white rounded-3xl shadow-xl border border-blue-50/50 p-6 pt-20 md:p-12 relative overflow-hidden">
+                <div className="bg-white rounded-3xl shadow-xl border border-blue-50/50 p-6 pt-20 md:px-12 md:pb-12 md:pt-24 relative overflow-hidden">
                     {/* Decorative blob */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 -z-10 opacity-50" />
 
