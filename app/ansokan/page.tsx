@@ -248,7 +248,7 @@ function WizardContent() {
                     </div>
 
                     <div className="text-xs text-slate-500 mt-4 leading-relaxed">
-                        Genom att skicka in godkänner du våra villkor och att vi kontaktar dig med förslag på mäklare.
+                        Genom att skicka in godkänner du våra <a href="/villkor" target="_blank" className="underline hover:text-blue-600">villkor och integritetspolicy</a> och att vi kontaktar dig med förslag på mäklare.
                     </div>
 
                     <div className="mt-8 flex justify-end">

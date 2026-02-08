@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "OffertHem | Jämför mäklare & få högre slutpris",
   description: "Jämför lokala mäklare kostnadsfritt. Hitta bästa mäklaren för din försäljning och maximera din vinst. Verifierade mäklare i hela Sverige.",
+  metadataBase: new URL('https://www.offerthem.cloud'),
 };
 
 export default function RootLayout({
