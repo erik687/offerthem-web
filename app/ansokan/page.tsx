@@ -85,8 +85,11 @@ function WizardContent() {
 
     // Step 1: Postcode
     if (step === 1) {
+        const isEttWord = ["Radhus", "Fritidshus"].includes(propertyType);
+        const pronoun = isEttWord ? "ditt" : "din";
+
         return (
-            <WizardLayout step={1} title={`Hitta rätt lokala mäklare för din ${propertyType.toLowerCase()}`}>
+            <WizardLayout step={1} title={`Hitta rätt lokala mäklare för ${pronoun} ${propertyType.toLowerCase()}`}>
                 <div className="max-w-md mx-auto">
                     <label className="block text-sm font-bold text-slate-800 mb-2">Postnummer</label>
                     <input
@@ -115,9 +118,12 @@ function WizardContent() {
 
     // Step 2: Details
     if (step === 2) {
+        const isEttWord = ["Radhus", "Fritidshus"].includes(propertyType);
+        const pronoun = isEttWord ? "ditt" : "din";
+
         const title = formData.city
-            ? `Information om din ${propertyType.toLowerCase()} i ${formData.city}`
-            : `Information om din ${propertyType.toLowerCase()}`;
+            ? `Information om ${pronoun} ${propertyType.toLowerCase()} i ${formData.city}`
+            : `Information om ${pronoun} ${propertyType.toLowerCase()}`;
 
         return (
             <WizardLayout step={2} title={title} onBack={handleBack}>
