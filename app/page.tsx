@@ -11,6 +11,7 @@ import { HeroLogos } from "@/components/HeroLogos";
 import { InfoSection } from "@/components/InfoSection";
 import { ChecklistSection } from "@/components/ChecklistSection";
 import { Footer } from "@/components/Footer";
+import { StickyCTA } from "@/components/StickyCTA";
 
 export default function Home() {
   return (
@@ -102,6 +103,9 @@ export default function Home() {
 
       {/* Dynamic Social Proof Notification */}
       <SocialProofPopup />
+
+      {/* Sticky Scroll CTA */}
+      <StickyCTA />
     </main>
   );
 }
