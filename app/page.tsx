@@ -12,6 +12,7 @@ import { InfoSection } from "@/components/InfoSection";
 import { ChecklistSection } from "@/components/ChecklistSection";
 import { Footer } from "@/components/Footer";
 import { StickyCTA } from "@/components/StickyCTA";
+import { ScrollHint } from "@/components/ScrollHint";
 
 export default function Home() {
   return (
@@ -65,6 +66,8 @@ export default function Home() {
               {/* Pattern Blob */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/40 blur-3xl -z-10 rounded-full mix-blend-multiply" />
               <PropertySelector />
+              {/* Scroll Hint Arrow */}
+              <ScrollHint />
             </div>
           </div>
         </div>
