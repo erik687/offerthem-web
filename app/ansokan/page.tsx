@@ -163,7 +163,7 @@ function WizardContent() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-bold text-slate-900 mb-3">Hur många mäklare vill du jämföra?</label>
+                        <label className="block text-lg font-bold text-slate-900 mb-4">Hur många mäklare vill du jämföra?</label>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
                             {[2, 3, 4].map((num) => (
                                 <button
@@ -335,7 +335,7 @@ function WizardLayout({ step, title, subtitle, children, onBack }: { step: numbe
                     )}
                 </div>
 
-                <div className="bg-white rounded-3xl shadow-xl border border-blue-50/50 p-6 md:p-12 relative overflow-hidden">
+                <div className="bg-white rounded-3xl shadow-xl border border-blue-50/50 p-6 pt-20 md:p-12 relative overflow-hidden">
                     {/* Decorative blob */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 -z-10 opacity-50" />
 
