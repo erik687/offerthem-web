@@ -34,7 +34,7 @@ export const SocialProofPopup = () => {
             showNotification();
 
             // Then repeat every 38 seconds
-            const interval = setInterval(showNotification, 38000);
+            const interval = setInterval(showNotification, 53000);
             return () => clearInterval(interval);
         }, 5000);
 
